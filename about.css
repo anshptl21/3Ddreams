@@ -1,0 +1,28 @@
+#about-us-section{
+	padding: 30px;
+	margin-top: 10px;
+	background-color: lavenderblush;
+	color: black;
+	text-align: center;
+	max-width: 100vw;
+	height: auto;
+}
+
+.about-us-title{
+	padding-top: 10px;
+	font-size: 150%;
+	letter-spacing: 3px;
+}
+
+#about-us-text-section{
+	max-width: 100vw;
+	height: auto;
+	padding: 20px;
+	text-align: left;
+	color: black;
+	border: 2px black solid;
+	background-color: white;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
