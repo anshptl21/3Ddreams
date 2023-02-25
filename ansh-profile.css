@@ -109,12 +109,16 @@ section{
 
 #title{
 	padding-left: 5%;
+	display:flex;
+	flex-wrap:wrap;
 }
 
 .text{
 	padding:  0 2% 2% 5% ;
 	font-size: 100%;
-	letter-spacing: none;
+	letter-spacing: 2px;
+	display:flex;
+	flex-wrap:wrap;
 }
 
 #education_section{
