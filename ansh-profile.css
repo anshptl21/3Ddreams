@@ -114,6 +114,7 @@ section{
 .text{
 	padding:  0 2% 2% 5% ;
 	font-size: 100%;
+	letter-spacing: none;
 }
 
 #education_section{
