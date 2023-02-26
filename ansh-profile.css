@@ -233,3 +233,9 @@ footer{
 	text-align: center;
 	width: 100vw;
 }
+
+@media (max-width: 500px) {
+	#research{
+		height: fit-content;
+	}
+}
