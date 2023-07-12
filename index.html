@@ -1,124 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Ansh's Profile</title>
-	<link rel="stylesheet" href="ansh-profile.css">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src = "ansh-profile.js"></script>
-</head>
-<body>
-	<section id = "header">
-		<h1 id = "menu-bar">
-			Ansh's Profile
-			<span class = "nav">
-				<span class= "nav_buttons">
-					<a href = "#about_me_section">About Me</a>
-				</span>
-				<span class= "nav_buttons">
-					<a href = "#education_section">Education</a>
-				</span>
-				<span class= "nav_buttons">
-					<a href = "#resume_section">Resume</a>
-				</span>
-				<span class= "nav_buttons">
-					<a href = "#accomplishments">Accomplishments</a>
-				</span>
-				<span class= "nav_buttons">
-					<a href = "#link_section">Links</a>
-				</span>
-				<span class = "nav_buttons">
-					<a href = "#research">Research</a>
-				</span>
-			</span>
-		</h1>
-		</section>
-		<section id = "about_me_section">
-			<h1 id = "title">ALL ABOUT ANSH</h1>
-				<div class = "text"> Ansh is currently a high school junior at Allen High School. He likes to learn, code, research and is interested in math and science. He is learning new courses in physics, data sciece and R with multiple projects in progress. He has a lot of skills that he has learnt and worked on through high school. 
-					
-				</div>
-		</section>
-		<section id = "education_section">
-			<h1 id = "title">EDUCATION</h1>
-			<div> 
-				<ul>
-					<div class = "list_title">
-						Allen High School, TX
-					</div>
-					<div class="text">
-						Joined in August, 2021
-						Graduating in May, 2024
-						Sophmore & Current Junior 
-		
-					</div>
-					<div class="list_title">
-						Holmdel High School, NJ
-					</div>
-					<div class="text">
-						Left after end of school year of 2021
-						Freshman 
-					</div>
-				</ul>
-		</section>
-		<section id = "resume_section">
-			<a href = "https://drive.google.com/file/d/1Oix0AUMUKhJTta89bmSspL0dheYZqVty/view">Resume</a>
-		</section>
+    <head>
+        <title>Ansh Patel </title>
+        <link rel="stylesheet" href="profile.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/959c12000f.js" crossorigin="anonymous"></script> 
+        <script src = "profile.js"></script>
+    </head>
+    <body id = 'body' onload= 'onLoadAnimation()'>
+        <section id = "before_animation" style = "background-color: #DFDBC9; z-index: 5; min-width: 100vw; min-height: 100vh;">
+        </section>
+        <section id = "nav-bar">
+            <i  id = "nav-menu-button" class=" fa-lg fa-solid fa-bars" style="color: #E7D2CC;" onclick = "openNavMenu()"></i>
+            <span id = "nav-title" style = "z-index: -1;">Ansh Patel</span>
+            <i id = "code-icons" class="fa-solid fa-code" style= "color:#E7D2CC" onclick = "openSnippetBox('code-box')"></i>
+            <i id = "math-icons" class="fa-solid fa-calculator" style= "color:#E7D2CC" onclick="openSnippetBox('math-box')"></i>       
+            <i id = "space-icons" class="fa-solid fa-shuttle-space" style= "color:#E7D2CC" onclick = "openSnippetBox('space-box')"></i>
+            <i id = "engineer-icons" class="fa-solid fa-gears" style= "color:#E7D2CC" onclick = "openSnippetBox('engineer-box')"></i>
+            <i id = "about-icons"class="fa-solid fa-user" style= "color:#E7D2CC" onclick = "openSnippetBox('about-box')"></i>
+            <i id = "contact-icons" class="fa-solid fa-message" style= "color:#E7D2CC" onclick = "openSnippetBox('contact-box')"></i>
+            <hr>
+        </section>
+        <div id = "nav-menu-block" style = "display:none;">
+            <i id = "nav-menu-close-button" class="fa-lg fa-solid fa-angle-left" onclick = "closeNavMenu()"></i>
+            <br>
+            <br>
+            <h2 class = "nav-menu-options" onclick = "openPage('home')">Home</h2>
+            <br>
+            <h2 class = "nav-menu-options" onclick = "openPage('resume_page')">Resume</h2>
+            <br>
+            <h2 class = "nav-menu-options" onclick = "openPage('projects_page')">Projects</h2>
+            <br>
+            <h2 class = "nav-menu-options" onclick = "openPage('research_page')">Research</h2>
+            <br>
+        </div>
+        <div id = "main-box">
+        <div id = "main-profile-picture"></div>
+         <div id = "main-title">Ansh Patel's Profile</div>
+        </div>
+        <div id = "code-box"> 
+            <i id = "code-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('code-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-code"></i>
+            <span class = "icon_text_box"> <span style = "font-size: 175%;">Coding</span> <br> From a young age I have always been interested in coding and learned languages such as Python and Java. Since then I have always carried on developing my interest and skills in coding. I managed to self-learn several different computer languages, including Javascript, HTML/CSS, C++, TensorFlow, and R. I have increased my versality in my coding abilities and created different applications. Some of which are a mock wordle, an A.I-based application, a business website, and this profile. All of this profile was designing solely through HTML/CSS and Javascript.</span>
+        </div>
+        <div id = "math-box"> <i id = "math-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('math-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-calculator"></i>
+            <span id = "math" class = "icon_text_box"> <span style = "font-size: 175%;">Physics and Math</span><br> I always loved math, despite it sometimes being a difficult subject to master. Specifically, I have a keen interest in astrophysics. My school coursework has been surrounding this topic since the beginning of high school, and even my personal extracurricular activties are molding to fit within these interests. Ultimately, I plan to major in astrophysics. </span>
+        </div>
+        <div id = "space-box"> <i id = "space-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('space-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-shuttle-space"></i>
+            <span id = "math" class = "icon_text_box"> <span style = "font-size: 175%;">Space</span><br>Space has always been a big interest of mine since the I was a little kid. Over time, the interest had propspered into a fascination and desire to seek knowledge concerning its vast mysteries. I have then been studying the sciences surveying the universe, organizations at the front of its exploration, and the discoveries that had answered its mysterious characterisitcs. </span>
+        </div>
+        <div id = "engineer-box"> <i id = "engineer-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('engineer-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-gears"></i>
+            <span class = "icon_text_box"> <span style = "font-size: 175%;">Aerospace Engineering</span><br> This is a field I would like to also pursure in college. Aerospace engineering constitutes the area surrounding the principles of engineering aviation vehicles, including spacecrafts. I think this field would be a great fit for me as it would enable to combine my interest in physics and space and particpate in a field in which I can excel the most. </span>
+        </div>
+        <div id = "about-box"> <i id = "about-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('about-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-user"></i>
+            <span class = "icon_text_box"> <span style = "font-size: 175%;">About Me</span><br> <span id = "about">My name is Ansh Patel. I am a senior at Allen High School with a great variety in skills, interests and accomplishments. I am play tennis and spent almost seven years training in the sport. I have keen interests in physics and engineering.</span> </span>
+        </div>
+        <div id = "contact-box"> <i id = "contact-box_arrow" class = "fa-lg fa-solid fa-angle-up" onclick = "closeSnippetBox('contact-box')"></i>
+            <i class = "icon-box fa-lg fa-solid fa-message"></i>
+            <span class = "icon_text_box"> <span style = "font-size: 175%;">Contact Me</span>
+            <br>
+            <span id = "contact-box_form"> 
+                <form action="https://formsubmit.co/anshptl21@gmail.com" method="POST" target = "_blank"> 
+                    <input class = "contact-box_form_name_email" name = "Name" type = "text" placeholder = "Full Name">
+<br>
+                    <input class = "contact-box_form_name_email" name = "Email" type = "Email" placeholder = "Email*" required>
+<br>
+                    <textarea id = "contact-box_form_message" name = "Message" type = "text" placeholder = "Message*" required></textarea>
+<br>
+                    <button id = "submit_contact-box_form" type = "submit">Send</button> 
+                </form>
+            </span>
+        </div>
+        <section id = "resume_page">
+            <iframe id = "resume_frame" src = "https://docs.google.com/document/d/1lTxHqRxBXR9cbZPl-15L8AT4R-iSNCCvSlGmd-P6etA/edit?usp=sharing" title = "Ansh's Resume"></iframe>
+        </section>
+        <section id = "projects_page">
+            <div id = "project_details_nanobot_ai">
+                <span id = "project_text"><span style = "font-size: 200%;">A.I-Based Nanotechnology Research and Visualization Database |</span> <br>This platform is A.I based platform that is being coded through Python. It will be able to provide detail summaries regarding current nanotechnology research and advancements concerning serveral subtopics. Alongside this, the platform will be able to provide users with visualizations of how nanotechnology works in a variety of ways.</span>
+            </div>
+            <div id = "project_details_python">
+                <span id = "project_text"><span style = "font-size: 200%;"><a id = "project_link" href = "https://anshptl21.github.io/wordle/" target = "_blank">Mock wordle Game</a> |</span><br> A HTML, CSS, and Javascript based application that mimicks the New York Times Wordle game.</span>
+            </div>
+            <div id = "project_details_non_profit">
+                <span id = "project_text"><span style = "font-size: 200%;">Website for Non-Profit Businesses |</span><br> Created a working HTML/CSS, Javascript website for a non-profit business that uses the platform to shop for its products.</span>
+            </div>
+        </section>
+        <section id = "research_page">
+            <div id = "research_text_box"><span style = "font-size: 150%;"><a id = "research_link" href = "https://www.curieuxacademicjournal.com/_files/ugd/99711c_09bae15fce3f493bbfd56703b68a48f1.pdf">Nanoparticles in Medicine</a></span> <span style = "letter-spacing: 3px"><br><br> My research was a rigorous independent project that focuses on the effect of nanoparticle-based drug delivery system on rare diseases. It dives into understanding how current treatment methods used to treatment Spinal Muscular Atrophy could be augmented to incorporate nanoparticles to increases its effect. My research paper, Review of Nanoparticle-Based Drug Delivery Methods in Conjunction With
+                Antisense Oligonucleotide for the Treatment of Spinal Muscular Atrophy, focuses on  this concept and was recently published in the Curieux Academic Journal.</span></div>
+            <iframe id = "research_i_frame" src = "https://www.curieuxacademicjournal.com/_files/ugd/99711c_09bae15fce3f493bbfd56703b68a48f1.pdf">Review</iframe> 
+        </section>
+    </body>
 
-		<section id = "accomplishments">
-			Accomplishments 
-			<i id = "down-arrow1" class="fas fa-angle-down" onclick="downArrow('down-arrow1', 'accomplishment_section_container')"></i>
-		</section>
-		<section id = "accomplishment_section_container">
-			<ul>
-				<div class = "text">
-					Wrote an independent research paper surrounding the usage of nanoparticle-based drug delivery systems in conjunction with Antisense-Oligonucleotiedes for Spinal Musular Atrophy
-				</div>
-				<div class = "text">
-					Created my own mock wordle using HTML/CSS/JS
-				</div>
-				<div class = "text">
-					Joined The Borgen Project, a non-profit, for leadership position in advocation for bills for relief and aid for extreme poverty in foreign countries 
-				</div>
-			</ul>
-				
-		</section>
-
-		<section id = "link_section">
-			Links 
-			<i id = "down-arrow2" class="fas fa-angle-down" onclick="downArrow('down-arrow2', 'link_section_container')"></i>
-		</section>
-		<section id = "link_section_container">
-			<ul>
-				<div class = "text">
-					Research article
-				</div>
-				<div class = "text">
-					Website Projects
-			</ul>
-		</section>
-
-		<section id = "research">
-			<h1 id = 'title'>Project</h1>
-				<ul>
-					<div class = "text">
-						Working on a database application that utilizes an AI chatbot to summarize major research topics using PubMed as its database - I intend to use HTML/CSS/Python/Tensorflow/JS
-					</div>
-					<div class = "text">
-						Working on another Python AI chatbot that is able to take a rubric and an assignment and provide an automatic grading assessment for you, the improvements that can be made, and an example of the assignment - I intend to use HTML/CSS/Python/Tensorflow/JS
-					</div>
-					<div class = "text">
-						Learning courses over Tensorflow, Python AI, Data Science, R and Astrophysics - edX
-					</div>
-		</section>
-		
-		<footer>
-			Ansh Patel
-		</footer>
-</body>
 </html>
+
+
+<!--
+    <i id = "wordle-icon" class="fa-solid fa-gamepad"></i>
+                <hr id = "project_hr_2">
+                <i id = "non-profit-icon" class="fa-solid fa-briefcase"></i>
+                <i id = "close_project_arrow" class = "fa-solid fa-angle-right"></i>
+-->
