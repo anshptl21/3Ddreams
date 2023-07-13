@@ -92,7 +92,6 @@ body{
 	width: 100vw;
 	margin: 0;
 	background-color: #868B8E;
-	overflow-y: hidden;
 }
 
 #nav-bar{
@@ -154,7 +153,6 @@ hr{
 	background-color: whitesmoke;
 	width: fit-content;
 	height: 100vh;
-	overflow-x:hidden !important;
 	padding: 1.5%;
 	font-family: "Bebas Neue", sans-serif;
 	z-index: 5;
@@ -196,36 +194,42 @@ hr{
 }
 
 #main-box{
-	width: fit-content;
-	height: fit-content;
-	position: absolute;
-	left:0;
-	right:0;
-	top: 0;
-	bottom:0;
-	margin:auto;
 	z-index: -1;
 }
 
 #main-title{
 	display: inline-block;
-	color: #E7D2CC;
+	color: white;
 	font-size: 10vw;
 	font-family: "Bebas Neue", sans-serif;
 	width: fit-content;
 	height: fit-content;
 	letter-spacing: 8px;
 	position: absolute;
-	margin-left: -10%;
+	left:0;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto auto auto 2px;
 
 }
 
 #main-profile-picture{
-	display: inline-block;
-	background-color: #B9B7BD;
-	width: 30vw;
-	height: 30vw;
-	box-shadow: 20px 20px #EEEDE7;
+	font-size: 10vw;
+	font-family: "Bebas Neue", sans-serif;
+	width: fit-content;
+	height: fit-content;
+	letter-spacing: 8px;
+	color: black;
+	position: absolute;
+	left:0;
+	right:0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-color: #E7D2CC;
+	box-shadow: 20px 20px white;
+	padding: 2%;
 }
 
 
@@ -305,6 +309,8 @@ hr{
 	background-color: #647C90;
 	z-index: 1;
 	display: none;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 ::placeholder{
@@ -312,10 +318,7 @@ hr{
 	letter-spacing: 3px;
 }
 
-#projects_page{
-	overflow-y: scroll !important;
-	overflow-x: hidden;
-}
+
 
 .icon-box{
 	font-size: 10vw !important;
@@ -357,6 +360,7 @@ hr{
 #project_details_nanobot_ai, #project_details_python, #project_details_non_profit{
 	position: relative;
 	top: 12%;
+	left:0;
 	height: fit-content;
 	width: 100vw;
 	background-color: #F0D7D9;
@@ -476,24 +480,22 @@ hr{
 	transition: .4s ease-in;
 }
 
-:{
-	background-color: none;
-}
-
-::-webkit-scrollbar-track{
-	background-color:#4E4F50;
-}
 
 @media (max-width: 950px){
-	#research_page{
-		overflow-y: scroll !important;
+
+	#resume_page, #projects_page, #research_page{
+		overflow-y: scroll;
+	}
+	
+	#code-box, #space-box, #math-box, #engineer-box, #about-box, #contact-box{
+		overflow-y: visible !important;
 	}
 
 	#nav-menu-button{
-		font-size: 150%;
+		font-size: 3vw;
 	}
 
 	#nav-title, #code-icons, #engineer-icons, #space-icons, #math-icons, #about-icons, #contact-icons{
-		font-size: 100%;
+		font-size: 3vw;
 	}
 }
