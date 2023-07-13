@@ -24,7 +24,7 @@ function onLoadAnimation(){
     document.getElementById("before_animation").style.animation = "fadeOut .8s ease-in";
     setTimeout(function(){
         document.getElementById("before_animation").style.display = "none";
-        document.body.style.overflowY = "auto !important";
+
     }, 650);
 }
 
@@ -114,10 +114,7 @@ function closePage(page){
         i++;
     }
 }
-function changeBackgroundScroll(){
-        document.getElementById("nav-bar").style.backgroundColor = "lightsteelblue";
-        document.getElementById("nav-bar").style.transition = ".4s ease-in";
-}
+
 
 async function changeNavBackground(){
     pageOpen = [];
