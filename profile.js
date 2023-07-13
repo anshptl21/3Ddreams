@@ -119,84 +119,48 @@ function changeBackgroundScroll(){
         document.getElementById("nav-bar").style.transition = ".4s ease-in";
 }
 
-
-
-
-/*function heightOfText(){
-        var math = document.getElementById("math");
-        var math_box = document.getElementById("math-box");
-        var math_dim = math.getBoundingClientRect();
-        var math_box_dim = math_box.getBoundingClientRect();
-        console.log("working");
-        console.log(math_dim.height);
-        console.log(math_box_dim.height);
-        document.getElementById("math-box").style.height = (math_box_dim.height + math_dim.height) + "px";
-    }
-
-
-
-function openScreen(clicked_button){
-    console.log("in function")
-    about = document.getElementById("about-button");
-    contact = document.getElementById("contact-button");
-    about_screen = document.getElementById("about-button-onclick-screen").style.display;
-    header = document.getElementById("header").style.display;
-    if (clicked_button == "about-button"){
-        if (about_screen == "none"){
-            document.getElementById("about-button-onclick-screen").style.display = "block";
-            document.getElementById("about-button-onclick-screen").style.animation = "slideInFromLeft .4s ease-in";
+async function changeNavBackground(){
+    pageOpen = [];
+    pageOpen.push("resume_page", "projects_page", "research_page");
+    background_nav = []
+    background_nav.push("resume", "projects", "research")    
+    var i = 0;
+    while (i < pageOpen.length){
+        if (document.getElementById(pageOpen[i]).style.display == "block"){
+            document.getElementById(background_nav[i]).style.backgroundColor = "black";
+            document.getElementById(background_nav[i]).style.color = "white";
+            document.getElementById(background_nav[i]).style.transition = ".4s ease-in";
+        } else {
+            document.getElementById(background_nav[i]).style.backgroundColor = "transparent";
+            document.getElementById(background_nav[i]).style.color = "black";
+            document.getElementById(background_nav[i]).style.transition = ".4s ease-in";
         }
-        else {
-            document.getElementById("about-button-onclick-screen").style.display = "none";
-        }
-    } else if (clicked_button == "contact-button"){
-        if (about_screen == "none"){
-            document.getElementById("contact-button-onclick-screen").style.display = "block";
-            document.getElementById("contact-button-onclick-screen").style.animation = "slideInFromRight .6s ease-in";
-        }
-        else {
-            document.getElementById("contact-button-onclick-screen").style.display = "none";
-        }
+        i++;
     }
 }
- 
-function closeScreen(){
-    if (document.getElementById("about-button-onclick-screen").style.display == "block"){
-        document.getElementById("about-button-onclick-screen").style.animation = "none";
-        document.getElementById("about-button-onclick-screen").style.animation = "slideOutFromLeft .4s ease-in";
-        setTimeout(function(){
-            document.getElementById("about-button-onclick-screen").style.display = "none";
-        }, 375);
-    } else 
-        document.getElementById("contact-button-onclick-screen").style.animation = "none";
-        document.getElementById("contact-button-onclick-screen").style.animation = "slideOutFromRight .6s ease-in";
-        setTimeout(function(){
-            document.getElementById("contact-button-onclick-screen").style.display = "none";
-        }, 375);
-}
 
+setInterval(async () => {
+    await changeNavBackground();
+  }, 1000)
 
-document.addEventListener("click", function(event){
-    about = document.getElementById("about-button-onclick-screen").style.display;
-    contact = document.getElementById("contact-button-onclick-screen").style.display;
-    console.log(event)
-    if (about || contact == "block"){
-        console.log("in if statement for block")
-        document.body.style.overflowY = "hidden";
-    }
-    setTimeout(function(){
-    about_after = document.getElementById("about-button-onclick-screen").style.display
-    contact_after = document.getElementById("contact-button-onclick-screen").style.display;
-    console.log(about_after)
-    console.log(contact_after)
-    if (about_after == "none"){
-        if (contact_after == "none"){
-            console.log("working");
-            document.body.style.overflowY = "visible";
+async function changeIconBackground(){
+    boxOpen = [];
+    boxOpen.push("code-box", "math-box", "space-box", "engineer-box", "about-box", "contact-box");
+    background_icon = []
+    background_icon.push("code-icons", "math-icons", "space-icons", "engineer-icons", "about-icons", "contact-icons")    
+    var i = 0;
+    while (i < boxOpen.length){
+        if (document.getElementById(boxOpen[i]).style.display == "flex"){
+            document.getElementById(background_icon[i]).style.backgroundColor = "white"
+            document.getElementById(background_icon[i]).style.borderRadius = "50%";
+            document.getElementById(background_icon[i]).style.transition = ".4s ease-in";
+        } else {
+            document.getElementById(background_icon[i]).style.backgroundColor = "transparent";
+            document.getElementById(background_icon[i]).style.transition = ".4s ease-in";
         }
+        i++;
     }
-    }, 500);
-});
-*/
-
-
+}
+setInterval(async () => {
+    await changeIconBackground();
+  }, 1000)
