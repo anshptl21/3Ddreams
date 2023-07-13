@@ -88,9 +88,9 @@
 }
 	
 body{
+	display: flex;
 	width: 100vw;
 	margin: 0;
-	overflow-x: auto !important;
 	background-color: #868B8E;
 	overflow-y: hidden;
 }
@@ -198,9 +198,13 @@ hr{
 #main-box{
 	width: fit-content;
 	height: fit-content;
-	position: relative;
-	transform: translateY(50%);
-	left: 25%;
+	position: absolute;
+	left:0;
+	right:0;
+	top: 0;
+	bottom:0;
+	margin:auto;
+	z-index: -1;
 }
 
 #main-title{
@@ -436,11 +440,11 @@ hr{
 	position: relative;
 	display:inline-block;
 	right: 0;
-	left: 10%; 
+	left: 0; 
 	top:20%;
 	bottom:0;
 	margin:auto;
-	width: 23vw;
+	width: fit-content;
 	height: fit-content;
 	background-color: #FFF9E1;
 	padding: 1.5%;
@@ -451,14 +455,14 @@ hr{
 
 #research_i_frame{
 	border: 2px black solid;
-	height:40vh;
-	width:40vw;
+	height:60vh;
+	width:50vw;
 	position: relative;
 	left: 20%; 
 	right:0;
-	top:10%;
+	top:25%;
 	bottom:0;
-	margin:auto;
+	margin:auto auto 2% auto;
 
 	display: inline-block;
 }
@@ -478,4 +482,18 @@ hr{
 
 ::-webkit-scrollbar-track{
 	background-color:#4E4F50;
+}
+
+@media (max-width: 950px){
+	#research_page{
+		overflow-y: scroll !important;
+	}
+
+	#nav-menu-button{
+		font-size: 150%;
+	}
+
+	#nav-title, #code-icons, #engineer-icons, #space-icons, #math-icons, #about-icons, #contact-icons{
+		font-size: 100%;
+	}
 }
