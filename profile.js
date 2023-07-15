@@ -126,11 +126,11 @@ async function changeNavBackground(){
         if (document.getElementById(pageOpen[i]).style.display == "block"){
             document.getElementById(background_nav[i]).style.backgroundColor = "black";
             document.getElementById(background_nav[i]).style.color = "white";
-            document.getElementById(background_nav[i]).style.transition = ".4s ease-in";
+            document.getElementById(background_nav[i]).style.transition = ".2s ease-in";
         } else {
             document.getElementById(background_nav[i]).style.backgroundColor = "transparent";
             document.getElementById(background_nav[i]).style.color = "black";
-            document.getElementById(background_nav[i]).style.transition = ".4s ease-in";
+            document.getElementById(background_nav[i]).style.transition = ".2s ease-in";
         }
         i++;
     }
@@ -138,7 +138,7 @@ async function changeNavBackground(){
 
 setInterval(async () => {
     await changeNavBackground();
-  }, 1000)
+  }, 300)
 
 async function changeIconBackground(){
     boxOpen = [];
@@ -150,14 +150,14 @@ async function changeIconBackground(){
         if (document.getElementById(boxOpen[i]).style.display == "flex"){
             document.getElementById(background_icon[i]).style.backgroundColor = "white"
             document.getElementById(background_icon[i]).style.borderRadius = "50%";
-            document.getElementById(background_icon[i]).style.transition = ".4s ease-in";
+            document.getElementById(background_icon[i]).style.transition = ".2s ease-in";
         } else {
             document.getElementById(background_icon[i]).style.backgroundColor = "transparent";
-            document.getElementById(background_icon[i]).style.transition = ".4s ease-in";
+            document.getElementById(background_icon[i]).style.transition = ".2s ease-in";
         }
         i++;
     }
 }
 setInterval(async () => {
     await changeIconBackground();
-  }, 1000)
+  }, 300)
