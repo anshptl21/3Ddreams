@@ -137,7 +137,7 @@ body{
 }
 
 #code-icons:hover, #engineer-icons:hover, #space-icons:hover, #math-icons:hover, #about-icons:hover, #contact-icons:hover{
-	background-color: white;
+	background-color: grey;
 	border-radius: 50%;
 	transition: .4s ease-in;
 }
@@ -187,9 +187,8 @@ hr{
 }
 
 #nav-menu-close-button:hover{
-	color:black;
-	padding: 1%;
-	transition: .4s ease-in;
+	transform: rotate(180deg);
+	transition: .2s ease-in;
 	cursor: pointer;
 }
 
@@ -253,11 +252,12 @@ hr{
 	top: 0;
 	left: 50%;
 	margin-top: 2%;
+	z-index: 4;
 }
 
 #code-box_arrow:hover, #math-box_arrow:hover, #space-box_arrow:hover, #engineer-box_arrow:hover, #about-box_arrow:hover, #contact-box_arrow:hover{
-	font-size: 2.5vw;
-	transition: .4s ease-in;
+	font-style: underline;
+	transition: .3s ease-in;
 }
 
 #contact-box_form{
@@ -298,7 +298,7 @@ hr{
 
 .contact-box_form_name_email:hover, #contact-box_form_message:hover,  #submit_contact-box_form:hover{
 	box-shadow:none;
-	transition: .4s ease-in;
+	transition: .2s ease-in;
 }
 
 #resume_page, #links_page, #projects_page, #research_page{
